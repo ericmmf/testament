@@ -50,6 +50,9 @@ export interface IRPFData {
   dependentes: Dependente[];
   bensEDireitos: BemOuDireito[];
   dividas: Divida[];
+  // Extracted from "Resumo da Declaração" or "Evolução Patrimonial" —
+  // used to verify that sum of bensEDireitos.situacaoAtual matches.
+  totalBensEDireitosDeclarado?: number;
   parsedAt: Date;
   sourceFormat: 'dec' | 'pdf';
   confidenceNotes: string[];
